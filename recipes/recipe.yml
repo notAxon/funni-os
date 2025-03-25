@@ -50,7 +50,7 @@ modules:
         - com.mojang.Minecraft
         - tech.feliciano.pocket-casts
         - com.jeffser.Alpaca
-        - org.gnome.gitlab.somas.Apostrophe
+        #- org.gnome.gitlab.somas.Apostrophe
 
       remove:
         - org.gnome.eog
