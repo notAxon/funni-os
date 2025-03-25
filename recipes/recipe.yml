@@ -56,5 +56,16 @@ modules:
         - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages
 
+  - type: gnome-extensions
+    install:
+      - Blur my Shell
+      - Just Perfection
+      - Tiling Shell
+      - User Themes
+      - Dash to Dock 
+      - Caffeine
+      - Clipboard Indicator 
+      - Frippery Move Clock 
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
