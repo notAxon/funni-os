@@ -28,6 +28,7 @@ modules:
       - nemo
       - gimp
       - blender
+      - openssh
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -64,7 +65,7 @@ modules:
       - User Themes
       - Dash to Dock 
       - Caffeine
-      - Clipboard Indicator 
+   #   - Clipboard Indicator 
       - Frippery Move Clock 
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
