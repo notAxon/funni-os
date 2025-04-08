@@ -31,16 +31,20 @@ modules:
       - openssh
       - cargo
       - tmux
+      - tor
+      - torbrowser-launcher
 
       #hyprland 
       - hyprland-git
       - xdg-desktop-portal-hyprland
-      - waybar
+      - waybar-git
       - rofi-wayland
       - hyprshot
       - blueman 
       - brightnessctl
       - nwg-look
+      - swww
+      - waypaper
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
