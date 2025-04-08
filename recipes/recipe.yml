@@ -18,9 +18,9 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: rpm-ostree
-    repos:
+  #repos:
       #- https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
-      - solopasha-hyprland-fedora-42.repo 
+      #- solopasha-hyprland-fedora-42.repo 
     install:
       - micro
       - neovim
@@ -37,16 +37,16 @@ modules:
       - torbrowser-launcher
 
       #hyprland 
-      - hyprland-git
-      - xdg-desktop-portal-hyprland
-      - waybar-git
-      - rofi-wayland
-      - hyprshot
-      - blueman 
-      - brightnessctl
-      - nwg-look
-      - swww
-      - waypaper
+      #- hyprland-git
+      #- xdg-desktop-portal-hyprland
+      #- waybar-git
+      #- rofi-wayland
+      #- hyprshot
+      #- blueman 
+      #- brightnessctl
+      #- nwg-look
+      #- swww
+      #- waypaper
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
