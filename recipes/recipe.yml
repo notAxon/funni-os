@@ -24,6 +24,7 @@ modules:
     install:
       - micro
       - neovim
+      - fastfetch
       - alacritty
       - tmux
       - nemo
