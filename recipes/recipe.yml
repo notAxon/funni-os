@@ -18,8 +18,8 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: rpm-ostree
-  #repos:
-  #    - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
+  repos:
+      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
     install:
       - micro
       - neovim
@@ -29,6 +29,18 @@ modules:
       - gimp
       - blender
       - openssh
+      - cargo
+      - tmux
+
+      #hyprland 
+      - hyprland-git
+      - xdg-desktop-portal-hyprland
+      - waybar
+      - rofi-wayland
+      - hyprshot
+      - blueman 
+      - brightnessctl
+      - nwg-look
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
