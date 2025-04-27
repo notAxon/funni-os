@@ -19,6 +19,7 @@ modules:
 
   - type: rpm-ostree
   #repos:
+      - https://copr.fedorainfracloud.org/coprs/brycensranch/gpu-screen-recorder-git/repo/fedora-%OS_VERSION%/brycensranch-gpu-screen-recorder-git-fedora-%OS_VERSION%.repo
       #- https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
       #- solopasha-hyprland-fedora-42.repo 
     install:
@@ -39,6 +40,7 @@ modules:
       - waybar
       - xdg-desktop-portal-hyprland
       - rofi-wayland
+      - gpu-screen-recorder-gtk
       #hyprland 
       #- hyprland-git
       #- xdg-desktop-portal-hyprland
@@ -89,5 +91,18 @@ modules:
    #   - Clipboard Indicator 
       - Frippery Move Clock 
 
+  - type: fonts
+  fonts:
+  nerd-fonts:
+    - FiraCode # don't add spaces or "Nerd Font" suffix.
+    - Hack
+    - SourceCodePro
+    - Terminus
+    - JetBrainsMono
+    - NerdFontsSymbolsOnly
+  google-fonts:
+    - Roboto
+    - Open Sans
+      
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
