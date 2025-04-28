@@ -92,17 +92,17 @@ modules:
       - Frippery Move Clock 
 
   - type: fonts
-  fonts:
-  nerd-fonts:
-    - FiraCode # don't add spaces or "Nerd Font" suffix.
-    - Hack
-    - SourceCodePro
-    - Terminus
-    - JetBrainsMono
-    - NerdFontsSymbolsOnly
-  google-fonts:
-    - Roboto
-    - Open Sans
+    fonts:
+    nerd-fonts:
+      - FiraCode # don't add spaces or "Nerd Font" suffix.
+      - Hack
+      - SourceCodePro
+      - Terminus
+      - JetBrainsMono
+      - NerdFontsSymbolsOnly
+    google-fonts:
+      - Roboto
+      - Open Sans
       
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
