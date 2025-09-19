@@ -44,6 +44,7 @@ modules:
       #- nwg-look
       - swww
       - waypaper
+      - syncthing
       #- gpu-screen-recorder-git 
     #remove:
       # example: removing firefox (in favor of the flatpak)
@@ -64,11 +65,10 @@ modules:
         - com.mattjakeman.ExtensionManager
         - com.github.tchx84.Flatseal
         - com.system76.Popsicle
-        - com.mojang.Minecraft
-        - tech.feliciano.pocket-casts
-        - com.jeffser.Alpaca
+        - com.mojang.Minecraft      
+        #- com.jeffser.Alpaca
         - md.obsidian.Obsidian
-        - com.dec05eba.gpu_screen_recorder
+        #- com.dec05eba.gpu_screen_recorder
         #- org.gnome.gitlab.somas.Apostrophe
 
       remove:
@@ -98,6 +98,14 @@ modules:
       google-fonts:
         - Roboto
         - Open Sans
-      
+
+  - type: systemd
+    system:   
+      enabled: 
+        - warp-svc.service 
+    user:
+      enabled:
+        - syncthing.service
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
