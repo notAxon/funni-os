@@ -52,13 +52,17 @@ modules:
       #- firefox
       #- firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
-  - type: default-flatpaks
-    configurations:
-      notify: true # Send notification after install/uninstall is finished (true/false)
-      - scope: system
-        repo: 
-          title: Flathub (system)
-        install:
+- type: default-flatpaks
+  configurations:
+    - scope: user
+      repo:
+        # you can override the title to make inclusion of both system and user repos clearer
+        title: Flathub (user)
+    - notify: true
+      scope: system
+      repo:
+        title: Flathub (system)
+      install: # system flatpaks we want all users to have and not remove
           - org.gnome.Loupe
           - app.zen_browser.zen
           - dev.vencord.Vesktop
