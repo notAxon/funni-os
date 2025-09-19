@@ -44,6 +44,7 @@ modules:
       #- nwg-look
       - swww
       - waypaper
+      - qutebrowser
       - syncthing
       #- gpu-screen-recorder-git 
     #remove:
@@ -52,35 +53,28 @@ modules:
       #- firefox
       #- firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
-- type: default-flatpaks
-  configurations:
-    - scope: user
-      repo:
-        # you can override the title to make inclusion of both system and user repos clearer
-        title: Flathub (user)
-    - notify: true
-      scope: system
-      repo:
-        title: Flathub (system)
-      install: # system flatpaks we want all users to have and not remove
-          - org.gnome.Loupe
-          - app.zen_browser.zen
-          - dev.vencord.Vesktop
-          - com.spotify.Client
-          - com.notesnook.Notesnook
-          - com.mattjakeman.ExtensionManager
-          - com.github.tchx84.Flatseal
-          - com.system76.Popsicle
-          - com.mojang.Minecraft      
-          - md.obsidian.Obsidian
-          #- com.jeffser.Alpaca
-          #- com.dec05eba.gpu_screen_recorder
-          #- org.gnome.gitlab.somas.Apostrophe
-
-        remove:
-          - org.gnome.eog
+  - type: default-flatpaks
+    configurations:
       - scope: user
-          {} # Also add Flathub user repo, but no user packages
+        repo:
+          # you can override the title to make inclusion of both system and user repos clearer
+          title: Flathub (user)
+      - notify: true
+        scope: system
+        install: # system flatpaks we want all users to have and not remove
+            - org.gnome.Loupe
+            - app.zen_browser.zen
+            - dev.vencord.Vesktop
+            - com.spotify.Client
+            - com.notesnook.Notesnook
+            - com.mattjakeman.ExtensionManager
+            - com.github.tchx84.Flatseal
+            - com.system76.Popsicle
+            - com.mojang.Minecraft      
+            - md.obsidian.Obsidian
+            #- com.jeffser.Alpaca
+            #- com.dec05eba.gpu_screen_recorder
+            #- org.gnome.gitlab.somas.Apostrophe
 
   - type: gnome-extensions
     install:
