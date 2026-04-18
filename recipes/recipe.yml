@@ -1,13 +1,13 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: funni-os
+name: silverblue++
 # description will be included in the image's metadata
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-#base-image: ghcr.io/ublue-os/silverblue-main
-base-image: ghcr.io/ublue-os/bluefin
+base-image: ghcr.io/ublue-os/silverblue-main
+#base-image: ghcr.io/ublue-os/bluefin
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -21,8 +21,9 @@ modules:
   - type: rpm-ostree
     repos:
       #- https://copr.fedorainfracloud.org/coprs/brycensranch/gpu-screen-recorder-git/repo/fedora-%OS_VERSION%/brycensranch-gpu-screen-recorder-git-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
-      - https://packages.freedom.press/yum-tools-prod/dangerzone/dangerzone.repo       #- solopasha-hyprland-fedora-42.repo 
+      #- https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
+      #- https://packages.freedom.press/yum-tools-prod/dangerzone/dangerzone.repo       
+      #- solopasha-hyprland-fedora-42.repo 
     install:
       - neovim
       - fastfetch
@@ -30,28 +31,27 @@ modules:
       - git 
       - stow
       - tmux
-      - nemo
       - openssh
       - tor
       - torbrowser-launcher
-      - hyprland 
-      - waybar
-      - xdg-desktop-portal-wlr
-      - rofi
-      - hyprshot
+      #- hyprland 
+      #- waybar
+      #- xdg-desktop-portal-wlr
+      #- rofi
+      #- hyprshot
       #- blueman 
-      - brightnessctl
+      #- brightnessctl
       #- nwg-look
-      - swww
-      - waypaper
-      - qutebrowser
+      #- swww
+      #- waypaper
+      #- qutebrowser
       - syncthing
       #- gpu-screen-recorder-git 
     #remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
-      #- firefox
-      #- firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      - firefox
+      - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
   - type: default-flatpaks
     configurations:
@@ -66,11 +66,9 @@ modules:
             - app.zen_browser.zen
             - dev.vencord.Vesktop
             - com.spotify.Client
-            - com.notesnook.Notesnook
             - com.mattjakeman.ExtensionManager
             - com.github.tchx84.Flatseal
             - com.system76.Popsicle
-            - com.mojang.Minecraft      
             - md.obsidian.Obsidian
             #- com.jeffser.Alpaca
             #- com.dec05eba.gpu_screen_recorder
@@ -78,13 +76,11 @@ modules:
 
   - type: gnome-extensions
     install:
-      - Blur my Shell
       - Just Perfection
       - Tiling Shell
       - User Themes
       - Dash to Dock 
       - Caffeine
-   #   - Clipboard Indicator 
       - Frippery Move Clock 
 
   - type: fonts
