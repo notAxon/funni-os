@@ -32,6 +32,7 @@ modules:
       - stow
       - tmux
       - openssh
+      - nix
       - tor
       - torbrowser-launcher
       #- hyprland 
